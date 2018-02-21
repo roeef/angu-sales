@@ -12,20 +12,18 @@ export class AppComponent implements OnInit, OnDestroy  {
   dogBirthDate: Date;
   sayHello: any;
   title = 'my first angular 2.0 adventure!';
-  
   constructor() {}
-  
-  ngOnInit() { 
-  	this.sayHello = window.setInterval(() => console.log('Hello!'),  1000);	
+  ngOnInit() {
+    this.sayHello = window.setInterval(() => console.log('Hello!'),  1000);
   }
-  
-  ngOnDestroy(){
-  	window.clearInterval(this.sayHello);	
+
+  ngOnDestroy() {
+    window.clearInterval(this.sayHello);
   }
-  
+
   addDog(){
-  	/*this.dogs.push({name: this.dogName, 
-  				   weight: this.dogWeight, 
-  				   birthDate: new Date()});	*/
+    /*this.dogs.push({name: this.dogName,
+                     weight: this.dogWeight,
+                     birthDate: new Date()});	*/
   }
 }

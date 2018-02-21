@@ -18,11 +18,15 @@ router.post('/dogs', (req, res) => {
     var dog = req.body.dog;
     dog.id = generateId();
     DOGS.push(dog);
-    res.send(JSON.stringify(dog)); 
+    console.log("added", dog);
+    res.send(JSON.stringify(dog));
 });
 
 router.put('/dogs/:id', (req, res) => {
-    var dogIndex = DOGS.findIndex((dog) => dog.id.toString() == req.params.id.toString());
+  console.log("a",req.params.id.toString());
+  console.log("b",req.body.dog);
+
+  var dogIndex = DOGS.findIndex((dog) => dog.id.toString() == req.params.id.toString());
     dogId = DOGS[dogIndex].id;
     DOGS[dogIndex] = req.body.dog;
     DOGS[dogIndex].id = dogId;

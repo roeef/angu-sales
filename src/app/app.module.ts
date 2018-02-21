@@ -6,6 +6,7 @@ import { DogService } from './dog.service';
 import { AppComponent } from './app.component';
 import { DogsComponent } from './dogs/dogs.component';
 import { DogEditorComponent } from './dog-editor/dog-editor.component';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DogEditorComponent } from './dog-editor/dog-editor.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [DogService],
   bootstrap: [AppComponent]

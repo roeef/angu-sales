@@ -17,19 +17,20 @@ export class DogEditorComponent implements OnInit {
   }
 
   isEditMode() {
-    return this.dog.hasOwnProperty('id')
+    return this.dog.hasOwnProperty('id');
   }
 
-  cancelEditMode() { 
+  cancelEditMode() {
     this.dog = new Dog();
   }
 
   updateDog() {
-    this.dogService.editDog(this.dog.id, this.dog);
+    this.dogService.editDog(this.dog);
   }
 
-  addDog(){
-  	this.dogService.addDog(this.dog);  		
+  addDog() {
+    this.dogService.addDog(this.dog);
+    this.dog = new Dog();
   }
 
 }
