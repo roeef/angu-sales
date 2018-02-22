@@ -1,11 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DogService } from './dog.service';
+import { DataService } from './data.service';
 
 import { AppComponent } from './app.component';
-import { DogsComponent } from './dogs/dogs.component';
-import { DogEditorComponent } from './dog-editor/dog-editor.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CustomersComponent } from './customers/customers.component';
 import { CompaniesComponent } from './companies/companies.component';
@@ -22,8 +20,6 @@ import { CompanyRowComponent } from './company-row/company-row.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DogsComponent,
-    DogEditorComponent,
     CustomersComponent,
     CompaniesComponent,
     AddCompanyComponent,
@@ -39,7 +35,7 @@ import { CompanyRowComponent } from './company-row/company-row.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [DogService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
