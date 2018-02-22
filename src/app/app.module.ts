@@ -14,6 +14,7 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerRowComponent } from './customer-row/customer-row.component';
 import { LoadingComponent } from './loading/loading.component';
+import { MaterialImportsModule } from './material-import/material-import.module';
 
 
 @NgModule({
