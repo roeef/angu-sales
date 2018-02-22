@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+import Customer from '../../models/customer';
 
 @Component({
   selector: 'app-customer-row',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class CustomerRowComponent implements OnInit {
 
   constructor() { }
+  @Input() index: number;
+  @Input() customer: Customer;
 
   ngOnInit() {
   }
