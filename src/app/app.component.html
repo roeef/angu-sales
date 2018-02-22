@@ -1,2 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-root></app-root>
+<nav>
+  <a routerLink="/">Customers</a>
+  <a routerLink="/about">Comapnies</a>
+  <a routerLink="/customer">Customer</a>
+  <a routerLink="/company">Company</a>
+
+  <a *ngIf="loggedIn" routerLink="/add-dog">Add Dog</a>
+
+</nav>
+
+Test
+
