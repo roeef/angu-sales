@@ -14,6 +14,8 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerRowComponent } from './customer-row/customer-row.component';
 import { LoadingComponent } from './loading/loading.component';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
+import { CompanyRowComponent } from './company-row/company-row.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { LoadingComponent } from './loading/loading.component';
     AddCustomerComponent,
     CustomerDetailsComponent,
     CustomerRowComponent,
-    LoadingComponent
+    LoadingComponent,
+    CompanyDetailsComponent,
+    CompanyRowComponent
   ],
   imports: [
     BrowserModule,
