@@ -22,7 +22,7 @@ export class AppComponent implements OnInit, OnDestroy  {
   }
 
   addDog(){
-    /*this.dogs.push({name: this.dogName,
+    /*this.customers.push({name: this.dogName,
                      weight: this.dogWeight,
                      birthDate: new Date()});	*/
   }
