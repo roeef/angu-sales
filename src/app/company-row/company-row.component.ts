@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import Customer from '../../models/customer';
 import Company from '../../models/company';
 
 @Component({
@@ -8,11 +7,14 @@ import Company from '../../models/company';
   styleUrls: ['./company-row.component.css']
 })
 export class CompanyRowComponent implements OnInit {
-
-  constructor() { }
-
   @Input() index: number;
+
   @Input() company: Company;
+  constructor() {
+  }
+  get keyArray() {
+    return this.company ? Object.keys(this.company) : [];
+  }
 
   ngOnInit() {
   }

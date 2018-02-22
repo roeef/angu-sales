@@ -11,6 +11,9 @@ export class CustomerRowComponent implements OnInit {
   constructor() { }
   @Input() index: number;
   @Input() customer: Customer;
+  get keyArray() {
+    return this.customer ? Object.keys(this.customer) : [];
+  }
 
   ngOnInit() {
   }

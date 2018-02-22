@@ -1,1 +1,6 @@
-{{ customer.id}} - {{ customer.firstname }}
+{{(index+1)}}) <span *ngFor="let a of keyArray">
+  |{{a}}: {{ customer[a] }}
+</span>
+<a [routerLink]="['/customer',customer.id]">Details</a>
+<button>Delete</button>
+<br>

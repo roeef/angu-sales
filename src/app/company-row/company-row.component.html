@@ -1,2 +1,7 @@
-{{(index+1)}}) - ID:{{company.id}} - {{company.name}}
-
+{{(index+1)}})
+<span *ngFor="let a of keyArray">
+  |{{a}}: {{ company[a] }}
+</span>
+<a [routerLink]="['/company',company.id]">Details</a>
+<button>Delete</button>
+<br>
