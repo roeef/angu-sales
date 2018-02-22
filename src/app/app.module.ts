@@ -15,6 +15,8 @@ import { LoadingComponent } from './loading/loading.component';
 import { MaterialImportsModule } from './material-import/material-import.module';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { CompanyRowComponent } from './company-row/company-row.component';
+import { AppRoutingModule } from './app-routing.module';
+
 
 
 @NgModule({
@@ -33,7 +35,8 @@ import { CompanyRowComponent } from './company-row/company-row.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
