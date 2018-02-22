@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import Company from '../../models/company';
 
 @Component({
   selector: 'app-company-row',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./company-row.component.css']
 })
 export class CompanyRowComponent implements OnInit {
+  @Input() index: number;
 
-  constructor() { }
+  @Input() company: Company;
+  constructor() {
+  }
+  get keyArray() {
+    return this.company ? Object.keys(this.company) : [];
+  }
 
   ngOnInit() {
   }
