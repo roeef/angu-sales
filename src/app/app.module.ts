@@ -14,7 +14,12 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
 import { CustomerDetailsComponent } from './customer-details/customer-details.component';
 import { CustomerRowComponent } from './customer-row/customer-row.component';
 import { LoadingComponent } from './loading/loading.component';
+<<<<<<< HEAD
 import { MaterialImportsModule } from './material-import/material-import.module';
+=======
+import { CompanyDetailsComponent } from './company-details/company-details.component';
+import { CompanyRowComponent } from './company-row/company-row.component';
+>>>>>>> 347de7810b1849af03b028351aad08379642b96f
 
 
 @NgModule({
@@ -28,7 +33,9 @@ import { MaterialImportsModule } from './material-import/material-import.module'
     AddCustomerComponent,
     CustomerDetailsComponent,
     CustomerRowComponent,
-    LoadingComponent
+    LoadingComponent,
+    CompanyDetailsComponent,
+    CompanyRowComponent
   ],
   imports: [
     BrowserModule,
