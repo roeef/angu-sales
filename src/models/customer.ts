@@ -3,6 +3,7 @@ export default class Customer {
     firstname: string;
     lastname: string;
     companyname:string;
+    companyid: number;
     email: string;
     phone: number;
     comments: Comment[];
