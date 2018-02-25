@@ -1,5 +1,42 @@
-<p>
-  customers works!
-</p>
+
 <app-filter [filters]="filters" ></app-filter>
-<app-customer-row *ngFor="let customer of customers | async;index as index" [index]="index" [customer]="customer"></app-customer-row>
+<!-- <app-customer-row *ngFor="let customer of customers | async;index as index" [index]="index" [customer]="customer"></app-customer-row> -->
+<h3>Customers</h3>
+
+<div class="container mat-elevation-z8">
+  <mat-table [customer]="customersObserv"| async>
+
+    <!-- firstName Column -->
+    <ng-container matColumnDef="firstName">
+      <mat-header-cell *matHeaderCellDef> First Name </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> <a [routerLink]="['customers', customer.customer_id]">{{customer.firstName}}</a></mat-cell>
+    </ng-container>
+
+    <!-- lastName Column -->
+    <ng-container matColumnDef="lastName">
+      <mat-header-cell *matHeaderCellDef> Last Name </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.lastName}} </mat-cell>
+    </ng-container>
+
+    <!-- company Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Company </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.name}} </mat-cell>
+    </ng-container>
+
+    <!-- email Column -->
+    <ng-container matColumnDef="Email">
+      <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.Email}} </mat-cell>
+    </ng-container>
+
+    <!-- phone Column -->
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef> Tel </mat-header-cell>
+      <mat-cell *matCellDef="let customer"> {{customer.phone}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>

@@ -31,9 +31,9 @@ import {
   MatTableModule,
   MatTabsModule,
   MatTooltipModule } from '@angular/material';
-  import { MatFormFieldModule } from '@angular/material/form-field';
+  // import { MatFormFieldModule } from '@angular/material/form-field';
 
-const modules = [MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuModule, MatIconModule, MatFormFieldModule,
+const modules = [MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuModule, MatIconModule, 
   MatButtonToggleModule,
   MatCardModule,
   MatChipsModule,
@@ -60,7 +60,7 @@ const modules = [MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuMo
   MatTableModule,
   MatTabsModule,
   MatTooltipModule,
-  MatFormFieldModule
+  // MatFormFieldModule
 ]
 @NgModule({
   imports: [modules],

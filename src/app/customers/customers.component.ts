@@ -11,6 +11,8 @@ import {Observable} from 'rxjs/Observable';
 export class CustomersComponent implements OnInit {
   private customersObserv: Observable<Array<Customer>>;
   filters: string;
+  customer: Customer;
+  displayedColumns = ['firstName', 'lastName', 'name', 'Email', 'phone'];
   constructor(private dataService: DataService) {
     this.customersObserv = this.dataService.getCustomers();
   }
