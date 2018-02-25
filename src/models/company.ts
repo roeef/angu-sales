@@ -1,6 +1,6 @@
 export default class Company {
     id: number;
     name: string;
-    address: any;
+    address: string;
     country: string;
 }

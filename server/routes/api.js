@@ -1,12 +1,44 @@
+const sql = require('../sql.server').db;
+
 const express = require('express');
 const router = express.Router();
 
 const CUSTOMERS = []
+var mysql = require('mysql');
+
+var connection = mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : '6551',
+    database : 'angusales'
+  })
+
+connection.connect()
+
+
+
+//   customerArray=[]; 
+  
+ function getCustomers(callback) {
+     console.log("start");
+    connection.query('SELECT * from customers', function(err, rows, fields){
+        if(!err) {
+            console.log("return",rows);
+            callback(rows);;
+            // console.log(customerArray);}
+        }
+       else {
+          console.log(err);}
+        
+    })
+  }
 
 
 /* GET api listing. */
 router.get('/customers', (req, res) => {
-  res.send(JSON.stringify(CUSTOMERS));
+    getCustomers(function(rows){
+      res.send(JSON.stringify(rows))
+    });
 });
 
 router.post('/customers', (req, res) => {
