@@ -1,3 +1,20 @@
-<p>
-  add-customer works!
-</p>
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="First Name" [(ngModel)]='customer.firstname'>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Last Name" [(ngModel)]='customer.lastname'>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Company ID" [(ngModel)]='customer.companyid'>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="email" [(ngModel)]='customer.email'>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="phone" [(ngModel)]='customer.phone'>
+  </mat-form-field>
+  <span><button mat-raised-button color="primary" (click)='updateDb($event)'>Add</button></span>
+</div>

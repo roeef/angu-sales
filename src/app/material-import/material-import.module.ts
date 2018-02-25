@@ -59,7 +59,9 @@ const modules = [MatButtonModule, MatCheckboxModule, MatToolbarModule, MatMenuMo
   MatStepperModule,
   MatTableModule,
   MatTabsModule,
-  MatTooltipModule]
+  MatTooltipModule,
+  MatFormFieldModule
+]
 @NgModule({
   imports: [modules],
   exports: [modules]

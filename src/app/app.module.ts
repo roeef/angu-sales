@@ -16,6 +16,7 @@ import { MaterialImportsModule } from './material-import/material-import.module'
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { CompanyRowComponent } from './company-row/company-row.component';
 import { AppRoutingModule } from './app-routing.module';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -37,7 +38,8 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule
     
   ],
   providers: [DataService],
