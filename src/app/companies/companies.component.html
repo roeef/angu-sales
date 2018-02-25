@@ -2,6 +2,6 @@
   companies works!
 </p>
 <ul>
-  <app-company-row *ngFor="let company of companies ;index as index" [index]="index" [company]="company">
+  <app-company-row *ngFor="let company of companies | async ;index as index" [index]="index" [company]="company">
   </app-company-row>
 </ul>

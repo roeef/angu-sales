@@ -1,4 +1,5 @@
 <p>
   customers works!
 </p>
-<app-customer-row *ngFor="let customer of customers;index as index" [index]="index" [customer]="customer"></app-customer-row>
+<app-filter [filters]="filters" ></app-filter>
+<app-customer-row *ngFor="let customer of customers | async;index as index" [index]="index" [customer]="customer"></app-customer-row>

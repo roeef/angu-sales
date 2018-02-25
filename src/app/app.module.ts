@@ -17,6 +17,7 @@ import { CompanyDetailsComponent } from './company-details/company-details.compo
 import { CompanyRowComponent } from './company-row/company-row.component';
 import { AppRoutingModule } from './app-routing.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { FilterComponent } from './filter/filter.component';
 
 
 
@@ -31,7 +32,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CustomerRowComponent,
     LoadingComponent,
     CompanyDetailsComponent,
-    CompanyRowComponent
+    CompanyRowComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AppRoutingModule,
     HttpClientModule,
     MatFormFieldModule
-    
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
