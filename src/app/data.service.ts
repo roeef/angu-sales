@@ -33,7 +33,7 @@ export class DataService {
     this.http.post<Customer>('api/customers', {customer: customer}).subscribe(resCustomer => this.customers.push(resCustomer));
   }
 
-  addCcompany(company: Customer) {
+  addCompany(company: Customer) {
     this.http.post<Customer>('api/companies', {company: company}).subscribe(resCompany => this.customers.push(resCompany));
   }
 
