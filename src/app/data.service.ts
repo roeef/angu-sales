@@ -21,12 +21,25 @@ export class DataService {
     return this.http.get<Customer[]>('api/customers').map(customers => {this.customers = customers; return customers; });
   }
 
-  deleteCustomer(customerId): Observable<Customer[]> {
-    const idx = this.customers.findIndex(customer => customerId === customer.id);
-    this.customers.splice(idx, 1);
-    // console.log(this.http.get<Customer[]>('api/customers'));
-    // return this.http.get<Customer[]>('api/customers').map(customers => {this.customers = customers; return customers; });
-    return null;
+  editCustomer(inputCustomer) {
+    this.http.put<Customer>(`api/customers/${inputCustomer.id}`, {customer: inputCustomer}).subscribe( (responseCustomer) => {
+      const idx = this.customers.findIndex(customer => responseCustomer.id === customer.id);
+      this.customers[idx] = responseCustomer;
+    });
+  }
+
+  deleteCustomer(customerId) {
+    this.http.delete(`api/customers/${customerId}`).subscribe( () => {
+      const idx = this.customers.findIndex(customer => customerId === customer.id);
+      this.customers.splice(idx, 1);
+    });
+  }
+
+  deleteCompany(companyId) {
+    this.http.delete(`api/companies/${companyId}`).subscribe( () => {
+      const idx = this.customers.findIndex(customer => companyId === customer.id);
+      this.customers.splice(idx, 1);
+    });
   }
 
   addCustomer(customer: Customer) {
@@ -36,13 +49,4 @@ export class DataService {
   addCompany(company: Customer) {
     this.http.post<Customer>('api/companies', {company: company}).subscribe(resCompany => this.customers.push(resCompany));
   }
-
-  // const someCustomer = new Customer();
-  // someCustomer.firstname = 'some customer first';
-  // someCustomer.id = 1;
-  // const someCustomer2 = new Customer();
-  // someCustomer2.firstname = 'other guy';
-  // someCustomer2.id = 2;
-  // return [someCustomer, someCustomer, someCustomer2];
-
 }
